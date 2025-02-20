@@ -1,0 +1,65 @@
+cofiguration {
+  modes: [combi];
+  combi-modes: [window,drun,run];
+}
+
+window {
+  width: 600px;
+  height: 400px;
+  // background-image: url("/home/luap/Pictures/arch.jpg",width);
+  background-color: rgba(255,255,255,1.0);
+  highlight: None;
+  // border-radius: 10px;
+  // border-color: transparent;
+  
+}
+
+scrollbar {
+  handle-color: blue;
+  handle-width: 10px;
+  background-color: rgba(0,0,255,0.3);
+}
+
+
+entry {
+  placeholder: "Type Here to Search";
+  cursor-color: rgb(255,0,0);
+  cursor-width: 2px;
+}
+
+element {
+  orientation: horizontal;
+  children: [element-icon, element-text];
+  spacing: 1em;
+  padding: 5px;
+}
+
+listview alternate.selected.normal {
+  background-color: rgb(255,255,0);
+}
+
+element selected.normal{
+  highlight: None;
+  background-color: rgb(200,200,255);
+}
+
+element-icon {
+  size: 2em;
+  background-color: transparent;
+}
+
+element-text {
+  color: blue;
+  background-color: rgba(255,255,255,0);
+  vertical-align: 0.5;
+}
+
+
+/* 
+entry, element-text {
+  text-color: red;
+  background-color: rgb(0,0,255);
+}
+*/
+
+
