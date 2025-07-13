@@ -1,1 +1,82 @@
-none
+cofiguration {
+  modes: [combi];
+  combi-modes: [window,drun,run];
+}
+
+* {
+  bgcolor: rgb(0,0,80);
+  texcolor: rgb(255,255,255); 
+  cursorcolor: blue;
+  bgnormal: rgb(100,100,255);
+  bgalternate: rgb(100,100,200);
+  bgselection: rgb(55,55,55); 
+
+}
+
+window {
+  width: 40%;
+  height: 40%;
+  // background-image: url("/home/luap/Pictures/arch.jpg",width);
+  background-color: @bgcolor;
+  highlight: None;
+  padding: 15px;
+}
+
+
+inputbar {
+  text-color: @texcolor;
+  spacing: 0.3em;
+  children: [textbox-custom,entry,case-indicator];
+}
+
+
+textbox-custom {
+  content: "Search:";
+  expand: false;
+  color: @texcolor;
+}
+
+scrollbar {
+  handle-color: blue;
+  handle-width: 10px;
+  background-color: rgba(0,0,255,0.3);
+}
+
+entry {
+  placeholder: "Mmm";
+  cursor-color: @cursorcolor;
+  cursor-width: 2px;
+  color: @texcolor;
+  padding: 0px 0px 10px 0px;
+}
+
+element {
+  orientation: horizontal;
+  children: [element-icon, element-text];
+  spacing: 1em;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+element.normal.normal {
+  background-color: @bgnormal;
+}
+element.selected.normal{
+  background-color: @bgselection;
+}
+element.alternate.normal{
+  background-color: @bgalternate;
+}
+listview alternate.normal {
+  background-color: rgb(255,255,0);
+}
+
+element-icon {
+  size: 2em;
+}
+
+element-text {
+  color: @texcolor;
+  vertical-align: 0.5;
+}
+
